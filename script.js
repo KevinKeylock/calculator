@@ -2,7 +2,7 @@ function add (x, y){
   return x + y;
 }
 
-function minus (x, y){
+function subtract (x, y){
   return x - y;
 }
 
