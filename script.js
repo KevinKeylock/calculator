@@ -8,10 +8,12 @@ const six = document.querySelector('#six');
 const seven = document.querySelector('#seven');
 const eight= document.querySelector('#eight');
 const nine = document.querySelector('#nine');
-
+const clear = document.querySelector('#clear')
 const display = document.getElementById('display');
-console.log(display.textContent)
 
+clear.addEventListener("click", function(){
+  display.innerHTML = 0;
+})
 one.addEventListener("click", function(){
   const displayTotal = 1;
   if (display.textContent === '0'){
