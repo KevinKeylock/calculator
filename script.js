@@ -10,6 +10,11 @@ const eight= document.querySelector('#eight');
 const nine = document.querySelector('#nine');
 const clear = document.querySelector('#clear')
 const display = document.getElementById('display');
+const plus = document.querySelector('#plus')
+
+const firstNumber = 0;
+const secondNumber = 0;
+const operator = '';
 
 clear.addEventListener("click", function(){
   display.innerHTML = 0;
@@ -85,9 +90,14 @@ zero.addEventListener("click", function(){
     display.textContent = `${display.textContent}${displayTotal}`;
   }})
 
-let firstNumber = 1;
-let secondNumber = 1;
-let operator = '+';
+const displayNumber = Number(display.textContent)
+
+/*plus.addEventListener("click", function(){
+  const firstNumber = display.textContent;
+  console.log (firstNumber);
+  return firstNumber
+  
+})*/
 
 function operate(firstNumber, operator, secondNumber){
   if(operator === '+'){
