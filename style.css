@@ -1,0 +1,36 @@
+.calculator {
+  width: 145px;
+  background-color: bisque;
+  border: black solid 1px;
+  border-radius: 5px;
+  height: 160px;
+}
+button {
+  margin-top: 5px;
+}
+#zero {
+  width: 52px;
+}
+#dot {
+  width: 22px;
+}
+#equals {
+  width: 52px;
+}
+#clear {
+  width: 52px;
+}
+#display {
+  display: block;
+  text-align: end;
+  width: 120px;
+  margin: 15px 10px 8px 10px;
+  background-color: rgb(15, 97, 79);
+  color: rgb(192, 192, 192);
+  padding: 4px 5px 0 0;
+  height: 20px;
+}
+
+#seven, #four, #one, #zero {
+  margin-left: 5px;
+} 
