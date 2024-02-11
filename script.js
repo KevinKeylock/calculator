@@ -129,12 +129,19 @@ divide.addEventListener("click", function(){
   operator.operator = 'divide';
 })
 equals.addEventListener("click", function(){
-  numbers.secondNumber = Number(display.textContent)
-  numberOne = numbers.firstNumber;
-  numberTwo = numbers.secondNumber;
-  operatorOne = operator.operator
-  operate(numberOne, operatorOne, numberTwo)
-})
+  if (numbers.secondNumber != 0){
+      numbers.firstNumber = Number(display.textContent)
+      numberOne = numbers.firstNumber;
+      numberTwo = numbers.secondNumber;
+      operatorOne = operator.operator
+      operate(numberOne, operatorOne, numberTwo)
+  } else {
+      numbers.secondNumber = Number(display.textContent)
+      numberOne = numbers.firstNumber;
+      numberTwo = numbers.secondNumber;
+      operatorOne = operator.operator
+      operate(numberOne, operatorOne, numberTwo)
+}})
 
 function operate(firstNumber, operator, secondNumber){
   if(operator === 'plus'){
