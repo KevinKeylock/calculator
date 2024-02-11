@@ -8,13 +8,14 @@ const six = document.querySelector('#six');
 const seven = document.querySelector('#seven');
 const eight= document.querySelector('#eight');
 const nine = document.querySelector('#nine');
-const clear = document.querySelector('#clear')
+const clear = document.querySelector('#clear');
 const display = document.getElementById('display');
-const plus = document.querySelector('#plus')
-const equals = document.querySelector('#equals')
-const minus = document.querySelector('#minus')
-const times = document.querySelector('#times')
-const divide = document.querySelector('#divide')
+const plus = document.querySelector('#plus');
+const equals = document.querySelector('#equals');
+const minus = document.querySelector('#minus');
+const times = document.querySelector('#times');
+const divide = document.querySelector('#divide');
+const dot = document.querySelector('#dot');
 
 const numbers = {
   firstNumber: 0,
@@ -97,6 +98,13 @@ zero.addEventListener("click", function(){
   } else {
     display.textContent = `${display.textContent}${displayTotal}`;
 }})
+dot.addEventListener("click", function(){
+  const displayTotal = '.';
+  if (display.textContent === '0'){
+    display.innerHTML = `0${displayTotal}`;
+  } else {
+    display.textContent = `${display.textContent}${displayTotal}`;
+}})
 
 plus.addEventListener("click", function(){
   numbers.firstNumber = Number(display.textContent);
@@ -118,7 +126,6 @@ divide.addEventListener("click", function(){
   display.textContent = 0;
   operator.operator = 'divide';
 })
-
 equals.addEventListener("click", function(){
   numbers.secondNumber = Number(display.textContent)
   numberOne = numbers.firstNumber;
@@ -141,13 +148,16 @@ function operate(firstNumber, operator, secondNumber){
 function add (x, y){
   let answer = x + y;
   display.textContent = `${answer}`;
-} function subtract (x, y){
+} 
+function subtract (x, y){
   let answer = x - y;
   display.textContent = `${answer}`;
-} function multiply (x, y){
+} 
+function multiply (x, y){
   let answer = x * y;
   display.textContent = `${answer}`;
-} function division (x, y){
+} 
+function division (x, y){
   let answer = x / y;
   display.textContent = `${answer}`;
 }
