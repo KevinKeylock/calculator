@@ -26,6 +26,8 @@ const operator = {
 };
 
 clear.addEventListener("click", function(){
+  numbers.firstNumber = 0;
+  numbers.secondNumber = 0;
   display.innerHTML = 0;
 })
 one.addEventListener("click", function(){
