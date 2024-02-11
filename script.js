@@ -109,39 +109,66 @@ dot.addEventListener("click", function(){
 }})
 
 plus.addEventListener("click", function(){
-  numbers.firstNumber = Number(display.textContent);
-  display.textContent = 0;
-  operator.operator = 'plus';
-})
+  if (numbers.secondNumber != 0){
+      equalsTwo()
+  } else if(numbers.firstNumber != 0){
+      equalsOne()
+  } else {
+      numbers.firstNumber = Number(display.textContent);
+      display.textContent = 0;
+      operator.operator = 'plus';
+}})
 minus.addEventListener("click", function(){
-  numbers.firstNumber = Number(display.textContent);
-  display.textContent = 0;
-  operator.operator = 'minus';
-})
+  if (numbers.secondNumber != 0){
+      equalsTwo()
+  } else if(numbers.firstNumber != 0){
+      equalsOne()
+  } else {
+      numbers.firstNumber = Number(display.textContent);
+      display.textContent = 0;
+      operator.operator = 'minus';
+}})
 times.addEventListener("click", function(){
-  numbers.firstNumber = Number(display.textContent);
-  display.textContent = 0;
-  operator.operator = 'times';
-})
-divide.addEventListener("click", function(){
-  numbers.firstNumber = Number(display.textContent);
-  display.textContent = 0;
-  operator.operator = 'divide';
-})
+  if (numbers.secondNumber != 0){
+    equalsTwo()
+} else if(numbers.firstNumber != 0){
+    equalsOne()
+} else {
+    numbers.firstNumber = Number(display.textContent);
+    display.textContent = 0;
+    operator.operator = 'times';
+}})
+divide.addEventListener("click", function(){  
+  if (numbers.secondNumber != 0){
+    equalsTwo()
+} else if(numbers.firstNumber != 0){
+    equalsOne()
+} else {
+    numbers.firstNumber = Number(display.textContent);
+    display.textContent = 0;
+    operator.operator = 'divide';
+}})
 equals.addEventListener("click", function(){
   if (numbers.secondNumber != 0){
-      numbers.firstNumber = Number(display.textContent)
-      numberOne = numbers.firstNumber;
-      numberTwo = numbers.secondNumber;
-      operatorOne = operator.operator
-      operate(numberOne, operatorOne, numberTwo)
+      equalsTwo()
   } else {
-      numbers.secondNumber = Number(display.textContent)
+      equalsOne()
+}})
+
+function equalsOne(){
+  numbers.secondNumber = Number(display.textContent)
+  numberOne = numbers.firstNumber;
+  numberTwo = numbers.secondNumber;
+  operatorOne = operator.operator
+  operate(numberOne, operatorOne, numberTwo)
+}
+function equalsTwo(){
+        numbers.firstNumber = Number(display.textContent)
       numberOne = numbers.firstNumber;
       numberTwo = numbers.secondNumber;
       operatorOne = operator.operator
       operate(numberOne, operatorOne, numberTwo)
-}})
+}
 
 function operate(firstNumber, operator, secondNumber){
   if(operator === 'plus'){
