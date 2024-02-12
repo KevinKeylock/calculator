@@ -144,7 +144,7 @@ zero.addEventListener("click", function(){
   } else if(numbers.secondNumber != 0){
       numbers.firstNumber = Number(display.textContent);
       numbers.secondNumber = 0;
-      display.textContent = 1;
+      display.textContent = 0;
   } else if (display.textContent === '0'){
       display.innerHTML = displayTotal;
   } else {
@@ -152,12 +152,15 @@ zero.addEventListener("click", function(){
 }})
 dot.addEventListener("click", function(){
   const displayTotal = '.';
-  if(display.textContent.includes(".")){
-  }
-  else if (display.textContent === '0'){
-    display.innerHTML = `0${displayTotal}`;
+  if (display.textContent.includes(".")){
+  }else if (numbers.secondNumber != 0){
+      numbers.firstNumber = Number(display.textContent);
+      numbers.secondNumber = 0;
+      display.textContent = '0.';
+  } else if (display.textContent === '0'){
+      display.innerHTML = `0${displayTotal}`;
   } else {
-    display.textContent = `${display.textContent}${displayTotal}`;
+      display.textContent = `${display.textContent}${displayTotal}`;
 }})
 
 plus.addEventListener("click", function(){
