@@ -32,77 +32,129 @@ clear.addEventListener("click", function(){
 })
 one.addEventListener("click", function(){
   const displayTotal = 1;
-  if (display.textContent === '0'){
-    display.innerHTML = displayTotal;
+  if (display.textContent.length > 12){
+  } else if(numbers.secondNumber != 0){
+      numbers.firstNumber = Number(display.textContent);
+      numbers.secondNumber = 0;
+      display.textContent = 1;
+  }else if (display.textContent === '0'){
+      display.innerHTML = displayTotal;
   } else {
-    display.textContent = `${display.textContent}${displayTotal}`;
+      display.textContent = `${display.textContent}${displayTotal}`;
 }})
 two.addEventListener("click", function(){
   const displayTotal = 2;
-  if (display.textContent === '0'){
-    display.innerHTML = displayTotal;
+  if (display.textContent.length > 12){
+  } else if(numbers.secondNumber != 0){
+      numbers.firstNumber = Number(display.textContent);
+      numbers.secondNumber = 0;
+      display.textContent = 2;
+  } else if (display.textContent === '0'){
+      display.innerHTML = displayTotal;
   } else {
-    display.textContent = `${display.textContent}${displayTotal}`;
+      display.textContent = `${display.textContent}${displayTotal}`;
 }})
 three.addEventListener("click", function(){
   const displayTotal = 3;
-  if (display.textContent === '0'){
-    display.innerHTML = displayTotal;
+  if (display.textContent.length > 12){
+  } else if(numbers.secondNumber != 0){
+      numbers.firstNumber = Number(display.textContent);
+      numbers.secondNumber = 0;
+      display.textContent = 3;
+  } else if (display.textContent === '0'){
+      display.innerHTML = displayTotal;
   } else {
-    display.textContent = `${display.textContent}${displayTotal}`;
+      display.textContent = `${display.textContent}${displayTotal}`;
 }})
 four.addEventListener("click", function(){
   const displayTotal = 4;
-  if (display.textContent === '0'){
-    display.innerHTML = displayTotal;
+  if (display.textContent.length > 12){
+  } else if(numbers.secondNumber != 0){
+      numbers.firstNumber = Number(display.textContent);
+      numbers.secondNumber = 0;
+      display.textContent = 4;
+  } else if (display.textContent === '0'){
+      display.innerHTML = displayTotal;
   } else {
-    display.textContent = `${display.textContent}${displayTotal}`;
+      display.textContent = `${display.textContent}${displayTotal}`;
 }})
 five.addEventListener("click", function(){
   const displayTotal = 5;
-  if (display.textContent === '0'){
-    display.innerHTML = displayTotal;
+  if (display.textContent.length > 12){
+  } else if(numbers.secondNumber != 0){
+      numbers.firstNumber = Number(display.textContent);
+      numbers.secondNumber = 0;
+      display.textContent = 5;
+  }else if (display.textContent === '0'){
+      display.innerHTML = displayTotal;
   } else {
-    display.textContent = `${display.textContent}${displayTotal}`;
+      display.textContent = `${display.textContent}${displayTotal}`;
 }})
 six.addEventListener("click", function(){
   const displayTotal = 6;
-  if (display.textContent === '0'){
-    display.innerHTML = displayTotal;
+  if (display.textContent.length > 12){
+  } else if(numbers.secondNumber != 0){
+      numbers.firstNumber = Number(display.textContent);
+      numbers.secondNumber = 0;
+      display.textContent = 6;
+  } else if (display.textContent === '0'){
+      display.innerHTML = displayTotal;
   } else {
-    display.textContent = `${display.textContent}${displayTotal}`;
+      display.textContent = `${display.textContent}${displayTotal}`;
 }})
 seven.addEventListener("click", function(){
   const displayTotal = 7;
-  if (display.textContent === '0'){
-    display.innerHTML = displayTotal;
+  if (display.textContent.length > 12){
+  } else if(numbers.secondNumber != 0){
+      numbers.firstNumber = Number(display.textContent);
+      numbers.secondNumber = 0;
+      display.textContent = 7;
+  } else if (display.textContent === '0'){
+      display.innerHTML = displayTotal;
   } else {
-    display.textContent = `${display.textContent}${displayTotal}`;
+      display.textContent = `${display.textContent}${displayTotal}`;
 }})
 eight.addEventListener("click", function(){
   const displayTotal = 8;
-  if (display.textContent === '0'){
-    display.innerHTML = displayTotal;
+  if (display.textContent.length > 12){
+  } else if(numbers.secondNumber != 0){
+      numbers.firstNumber = Number(display.textContent);
+      numbers.secondNumber = 0;
+      display.textContent = 8;
+  } else if (display.textContent === '0'){
+      display.innerHTML = displayTotal;
   } else {
-    display.textContent = `${display.textContent}${displayTotal}`;
+      display.textContent = `${display.textContent}${displayTotal}`;
 }})
 nine.addEventListener("click", function(){
   const displayTotal = 9;
-  if (display.textContent === '0'){
-    display.innerHTML = displayTotal;
+  if (display.textContent.length > 12){
+  } else if(numbers.secondNumber != 0){
+      numbers.firstNumber = Number(display.textContent);
+      numbers.secondNumber = 0;
+      display.textContent = 9;
+  } else if (display.textContent === '0'){
+      display.innerHTML = displayTotal;
   } else {
-    display.textContent = `${display.textContent}${displayTotal}`;
+      display.textContent = `${display.textContent}${displayTotal}`;
 }})
 zero.addEventListener("click", function(){
   const displayTotal = 0;
-  if (display.textContent === '0'){
-    display.innerHTML = displayTotal;
+  if (display.textContent.length > 12){
+  } else if(numbers.secondNumber != 0){
+      numbers.firstNumber = Number(display.textContent);
+      numbers.secondNumber = 0;
+      display.textContent = 1;
+  } else if (display.textContent === '0'){
+      display.innerHTML = displayTotal;
   } else {
-    display.textContent = `${display.textContent}${displayTotal}`;
+      display.textContent = `${display.textContent}${displayTotal}`;
 }})
 dot.addEventListener("click", function(){
   const displayTotal = '.';
-  if (display.textContent === '0'){
+  if(display.textContent.includes(".")){
+  }
+  else if (display.textContent === '0'){
     display.innerHTML = `0${displayTotal}`;
   } else {
     display.textContent = `${display.textContent}${displayTotal}`;
@@ -110,44 +162,40 @@ dot.addEventListener("click", function(){
 
 plus.addEventListener("click", function(){
   if (numbers.secondNumber != 0){
-      equalsTwo()
   } else if(numbers.firstNumber != 0){
-      equalsOne()
+      equalsOne();
   } else {
       numbers.firstNumber = Number(display.textContent);
-      display.textContent = 0;
-      operator.operator = 'plus';
-}})
+      display.textContent = 0;}
+    operator.operator = 'plus';
+})
 minus.addEventListener("click", function(){
   if (numbers.secondNumber != 0){
-      equalsTwo()
   } else if(numbers.firstNumber != 0){
       equalsOne()
   } else {
       numbers.firstNumber = Number(display.textContent);
-      display.textContent = 0;
-      operator.operator = 'minus';
-}})
+      display.textContent = 0;}
+  operator.operator = 'minus';
+})
 times.addEventListener("click", function(){
   if (numbers.secondNumber != 0){
-    equalsTwo()
 } else if(numbers.firstNumber != 0){
     equalsOne()
 } else {
     numbers.firstNumber = Number(display.textContent);
-    display.textContent = 0;
-    operator.operator = 'times';
-}})
+    display.textContent = 0;}
+  operator.operator = 'times'
+  })
 divide.addEventListener("click", function(){  
   if (numbers.secondNumber != 0){
-    equalsTwo()
 } else if(numbers.firstNumber != 0){
     equalsOne()
 } else {
     numbers.firstNumber = Number(display.textContent);
-    display.textContent = 0;
-    operator.operator = 'divide';
-}})
+    display.textContent = 0;}
+  operator.operator = 'divide';
+  })
 equals.addEventListener("click", function(){
   if (numbers.secondNumber != 0){
       equalsTwo()
@@ -163,11 +211,11 @@ function equalsOne(){
   operate(numberOne, operatorOne, numberTwo)
 }
 function equalsTwo(){
-        numbers.firstNumber = Number(display.textContent)
-      numberOne = numbers.firstNumber;
-      numberTwo = numbers.secondNumber;
-      operatorOne = operator.operator
-      operate(numberOne, operatorOne, numberTwo)
+  numbers.firstNumber = Number(display.textContent)
+  numberOne = numbers.firstNumber;
+  numberTwo = numbers.secondNumber;
+  operatorOne = operator.operator
+  operate(numberOne, operatorOne, numberTwo)
 }
 
 function operate(firstNumber, operator, secondNumber){
